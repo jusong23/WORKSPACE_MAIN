@@ -397,59 +397,6 @@
             <point key="canvasLocation" x="20" y="80"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="1Hw-ey-a7w">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="2bW-0f-uk9">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="7U8-nr-n3W">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="7ja-CN-thg">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="8HM-PR-mnK">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="Cad-r2-6mc">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="FRe-Fx-q3A">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="Ic7-87-Xgm">
-            <size key="intrinsicContentSize" width="41" height="48"/>
-        </designable>
-        <designable name="ODe-7H-ucb">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="Ojn-TR-JhK">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="TWU-4Y-pQm">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="WAz-Xv-1z5">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="YpR-E7-ZfZ">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="e1I-lh-uf1">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="eDQ-DB-DqZ">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="rGS-Bj-CjR">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-        <designable name="uYL-gG-mMn">
-            <size key="intrinsicContentSize" width="30" height="48"/>
-        </designable>
-    </designables>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
