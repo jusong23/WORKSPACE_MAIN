@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A4ECD8F3-850D-43BE-94F3-DF04A9090B79"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40A5568C-ADCA-431F-A266-E63B08356DB0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClosureExample/NextViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "NextViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "40A5568C-ADCA-431F-A266-E63B08356DB0 - 83b0f0b268661e58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureExample.NextViewController.dataSendClosure.getter : Swift.Optional&lt;(Swift.String) -&gt; ()&gt;"
+                  moduleName = "ClosureExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/song._.327/Documents/workSpace/WORKSPACE/UMC/ClosureExample/ClosureExample/NextViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "40A5568C-ADCA-431F-A266-E63B08356DB0 - c73f2de16ccc0e54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureExample.NextViewController.dataSendClosure.setter : Swift.Optional&lt;(Swift.String) -&gt; ()&gt;"
+                  moduleName = "ClosureExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/song._.327/Documents/workSpace/WORKSPACE/UMC/ClosureExample/ClosureExample/NextViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "40A5568C-ADCA-431F-A266-E63B08356DB0 - f41f52ac8ab28245"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureExample.NextViewController.dataSendClosure.modify : Swift.Optional&lt;(Swift.String) -&gt; ()&gt;"
+                  moduleName = "ClosureExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/song._.327/Documents/workSpace/WORKSPACE/UMC/ClosureExample/ClosureExample/NextViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "40A5568C-ADCA-431F-A266-E63B08356DB0 - b32fde5e86cd05cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureExample.NextViewController.dataSendClosure.modify : Swift.Optional&lt;(Swift.String) -&gt; ()&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ClosureExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/song._.327/Documents/workSpace/WORKSPACE/UMC/ClosureExample/ClosureExample/NextViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "40A5568C-ADCA-431F-A266-E63B08356DB0 - e29dabd656870809"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureExample.NextViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ClosureExample.NextViewController"
+                  moduleName = "ClosureExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/song._.327/Documents/workSpace/WORKSPACE/UMC/ClosureExample/ClosureExample/NextViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "40A5568C-ADCA-431F-A266-E63B08356DB0 - fa4ec6dfe113b3f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureExample.NextViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ClosureExample.NextViewController&gt;"
+                  moduleName = "ClosureExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/song._.327/Documents/workSpace/WORKSPACE/UMC/ClosureExample/ClosureExample/NextViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
