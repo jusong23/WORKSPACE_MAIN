@@ -16,15 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLi-Sm-fHa">
-                                <rect key="frame" x="24" y="68" width="366" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="2I2-bU-6YL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQC-8O-3v3">
                                 <rect key="frame" x="24" y="242" width="366" height="596"/>
                                 <subviews>
@@ -141,7 +132,7 @@
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="tapMultiplyBUutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Afx-Mh-1Sx"/>
+                                                            <action selector="tapMultiplyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y5d-pg-MXm"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -375,6 +366,15 @@
                                     <constraint firstAttribute="bottom" secondItem="eeb-Lj-4bJ" secondAttribute="bottom" priority="750" id="usH-ic-PwD"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLi-Sm-fHa">
+                                <rect key="frame" x="28" y="69" width="366" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="2I2-bU-6YL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
@@ -394,9 +394,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="80"/>
+            <point key="canvasLocation" x="-381" y="23"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1Hw-ey-a7w">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="2bW-0f-uk9">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="7U8-nr-n3W">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="7ja-CN-thg">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="8HM-PR-mnK">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="Cad-r2-6mc">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="FRe-Fx-q3A">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="Ic7-87-Xgm">
+            <size key="intrinsicContentSize" width="41" height="48"/>
+        </designable>
+        <designable name="ODe-7H-ucb">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="Ojn-TR-JhK">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="TWU-4Y-pQm">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="WAz-Xv-1z5">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="YpR-E7-ZfZ">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="e1I-lh-uf1">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="eDQ-DB-DqZ">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="rGS-Bj-CjR">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="uYL-gG-mMn">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -3,7 +3,7 @@
 //  Lecture_Calculator
 //
 //  Created by 이주송 on 2022/05/03.
-//
+// Source Tree Hi? ddbs
 
 import UIKit
 //9자리 넘으면 밀려나는 방식으로 구현해보기
@@ -50,7 +50,6 @@ class ViewController: UIViewController {
         self.result = ""
         self.currentOpearation = .unknown
         self.numberOutputLabel.text = "0"
-        
     }
     
     @IBAction func tapDotButton(_ sender: UIButton) {
