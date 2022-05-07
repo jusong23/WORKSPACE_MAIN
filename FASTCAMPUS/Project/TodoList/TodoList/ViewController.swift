@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     }
     
     @objc func doneButtonTap() {
+        self.navigationItem.leftBarButtonItem = self.editButton
+        self.tableView.setEditing(false, animated: true)
     }
 
     @IBAction func tapEditButton(_ sender: Any) {
@@ -90,6 +92,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.tasks.count
     } // 행의 갯수
@@ -106,7 +109,38 @@ extension ViewController: UITableViewDataSource {
         return cell
         //바로 위 cellForRowAt의 파라미터인 indexPath를 전달
     } // dequeueReusableCell : 위에 numberOfRowsInSection에서 return한 즉, 내가 사용한 만큼만 셀이 재사용되어 메모리 누수 방지
+    
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+    {
+        self.tasks.remove(at: indexPath.row) // tasks 배열에서 삭제
+        tableView.deleteRows(at: [indexPath], with: .automatic )
+        // tasks 배열에서 삭제된 것이 tableView에도 적용
+        if self.tasks.isEmpty {
+            self.doneButtonTap()
+        }
+    } // 편집모드에서 선택된 셀 알려주는 메소드
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    } // 셀을 재정렬 하는 메소드 (셀 오른쪽에 재정렬 이모지 띄움)
+
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        var tasks = self.tasks
+        let task = tasks[sourceIndexPath.row]
+        tasks.remove(at: sourceIndexPath.row)
+        tasks.insert(task, at: destinationIndexPath.row)
+        self.tasks = tasks // 위에 변경된 tasks 배열을 tasks에 적용
+    }
+// 어디서 옮기고 어디로 이동했는지 알 수 있는 메소드
+    
 } // 옵셔널 붙지않는 위의 두 함수는 UITableViewDataSource에서 필수 이다.
+
+
+
+
+
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
