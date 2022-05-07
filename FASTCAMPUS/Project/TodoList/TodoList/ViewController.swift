@@ -9,6 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var editButton: UIBarButtonItem! // weak으로 하면 edit버튼이 해제가되어 재사용 불가
+    // UIBarButtonItem 정의
+    
+    @IBOutlet weak var tableView: UITableView!
+    var doneButton: UIBarButtonItem?
     var tasks = [Task]() {
         didSet {
             self.saveTasks()
@@ -16,16 +21,24 @@ class ViewController: UIViewController {
     } // 넣을 할일 구조체들을 여기에 정의
 
     
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTap))
+        // 위에서 정의한 doneButton 생성 버튼 눌러질때만(동적호출용도) 사용되는 메소드
+        // doneButton이 눌리면 #selector 하겠다~
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.loadTasks()
     }
+    
+    @objc func doneButtonTap() {
+    }
 
     @IBAction func tapEditButton(_ sender: Any) {
+        guard !self.tasks.isEmpty else { return } // tasks 배열이 비어있지 '않을' 때만 실행하겠다
+        self.navigationItem.leftBarButtonItem = self.doneButton // 위에서 생성한 doneButton을 이제야 사용!
+        self.tableView.setEditing(true, animated: true)
     }
     
     @IBAction func tapAddButton(_ sender: Any) {
@@ -88,7 +101,7 @@ extension ViewController: UITableViewDataSource {
         if task.done {
             cell.accessoryType = .checkmark
         } else {
-            cell.accessoryType = .checkmark
+            cell.accessoryType = .none
         }
         return cell
         //바로 위 cellForRowAt의 파라미터인 indexPath를 전달
