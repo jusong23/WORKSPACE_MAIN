@@ -12,13 +12,11 @@ struct WeatherInformation: Codable {
     let temp: Temp
     let name: String
     
-    
-    enum Codingkeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case weather
         case temp = "main"
         case name
     }
-    
 } // json 인코딩, 디코딩 가능 weather informaiton 객체 <-> json
 // 날씨 정보 json 파일을 weather informaiton struct로 변환하는 작업(디코딩)
 
@@ -36,12 +34,13 @@ struct Temp: Codable {
     let minTemp: Double
     let maxTemp: Double
     
-    enum Codingkeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case temp
         case feelsLike = "feels_like"
         case minTemp = "temp_min"
         case maxTemp = "temp_max"
-    }// json파일과 구조체에 선언된 이름이 달라도 Mappint될수 있도록, CodingKey 프로토콜을 채택한 열거형 선언
+    }
+    // json파일과 구조체에 선언된 이름이 달라도 Mappint될수 있도록, CodingKey 프로토콜을 채택한  열거형 선언
 }
 
 
