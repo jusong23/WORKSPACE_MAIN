@@ -14,6 +14,7 @@
 		9B0A7E382828BE5C00B50954 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0A7E372828BE5C00B50954 /* Assets.xcassets */; };
 		9B0A7E3B2828BE5C00B50954 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0A7E392828BE5C00B50954 /* LaunchScreen.storyboard */; };
 		9B0A7E452828C47000B50954 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A7E442828C47000B50954 /* WeatherInformation.swift */; };
+		9B98D08E2828E996002CA971 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98D08D2828E996002CA971 /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9B0A7E3A2828BE5C00B50954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B0A7E3C2828BE5C00B50954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B0A7E442828C47000B50954 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		9B98D08D2828E996002CA971 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0A7E442828C47000B50954 /* WeatherInformation.swift */,
+				9B98D08D2828E996002CA971 /* ErrorMessage.swift */,
 				9B0A7E2E2828BE5900B50954 /* AppDelegate.swift */,
 				9B0A7E302828BE5900B50954 /* SceneDelegate.swift */,
 				9B0A7E322828BE5900B50954 /* ViewController.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				9B0A7E332828BE5900B50954 /* ViewController.swift in Sources */,
 				9B0A7E452828C47000B50954 /* WeatherInformation.swift in Sources */,
+				9B98D08E2828E996002CA971 /* ErrorMessage.swift in Sources */,
 				9B0A7E2F2828BE5900B50954 /* AppDelegate.swift in Sources */,
 				9B0A7E312828BE5900B50954 /* SceneDelegate.swift in Sources */,
 			);

@@ -52,7 +52,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-wx-2sh">
                                         <rect key="frame" x="63" y="67" width="240.5" height="71.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELe-Rv-GYJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="23°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELe-Rv-GYJ">
                                                 <rect key="frame" x="71.5" y="0.0" width="97" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                 <nil key="textColor"/>
@@ -100,6 +100,7 @@
                         <outlet property="minTempLabel" destination="Uhl-uG-dhx" id="QLu-T5-m8D"/>
                         <outlet property="tempLabel" destination="ELe-Rv-GYJ" id="Wvn-d5-ALQ"/>
                         <outlet property="weatherDiscription" destination="fQR-LR-vqK" id="xa1-Il-nhj"/>
+                        <outlet property="weatherStackView" destination="ZQP-61-cKd" id="bac-d4-Ob8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
