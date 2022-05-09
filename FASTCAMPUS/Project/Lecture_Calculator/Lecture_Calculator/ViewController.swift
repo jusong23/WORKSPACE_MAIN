@@ -5,6 +5,7 @@
 //  Created by 이주송 on 2022/05/03.
 // Source Tree Hi? ddbs
 // git test
+// gi..t test. . . 
 import UIKit
 //9자리 넘으면 밀려나는 방식으로 구현해보기
 enum Operation {
