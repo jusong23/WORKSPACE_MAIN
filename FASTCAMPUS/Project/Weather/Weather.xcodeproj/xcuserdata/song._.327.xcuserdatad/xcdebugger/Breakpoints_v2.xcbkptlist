@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F4478BED-933A-458F-91A7-2FD97585E934"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18B81AFA-9998-41B8-9F07-7A4F5435210A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/WeatherInformation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "Weather"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "18B81AFA-9998-41B8-9F07-7A4F5435210A - 1b675cbdf797e0f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.Temp.Codingkeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Weather.Temp.Codingkeys&gt;"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/song._.327/Documents/workSpace/WORKSPACE/FASTCAMPUS/Project/Weather/Weather/WeatherInformation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "18B81AFA-9998-41B8-9F07-7A4F5435210A - 8ec3fe5e5be05dbb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weather.Temp.Codingkeys.rawValue.getter : Swift.String"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/song._.327/Documents/workSpace/WORKSPACE/FASTCAMPUS/Project/Weather/Weather/WeatherInformation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

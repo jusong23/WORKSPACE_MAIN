@@ -1,10 +1,14 @@
 import UIKit
 
-let number = [1,2,3,4,5]
+var number = [1,2,3,4,5]
 let mapArray = number.map {(number)->Int in
 return number + 2
 }
 print("map \(mapArray)")
+
+number = mapArray
+
+print("map \(number)")
 
 
 let intNumber = [2,24,231,124,3]
