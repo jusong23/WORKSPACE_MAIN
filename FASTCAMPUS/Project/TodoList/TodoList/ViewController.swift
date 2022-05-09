@@ -73,6 +73,7 @@ class ViewController: UIViewController {
              "done": $0.done
             ]
         }
+        
         let userDefaluts = UserDefaults.standard
         userDefaluts.set(data, forKey: "tasks") // value, key 값을 parameter로 각각 저장
         // task 배열의 요소들을 딕셔너리형태로 저장
