@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o0h-Ve-Z2S">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o0h-Ve-Z2S">
                                 <rect key="frame" x="24" y="112" width="366" height="61"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6UZ-Xp-qXU">
@@ -55,7 +55,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-3z-oEl" customClass="PieChartView" customModule="Charts">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="GKu-bq-qhj">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-3z-oEl" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="24" y="197" width="366" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -66,17 +70,21 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o0h-Ve-Z2S" secondAttribute="trailing" constant="24" id="Cwk-Ih-uGI"/>
                             <constraint firstItem="GIf-3z-oEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="DyZ-89-O9L"/>
                             <constraint firstItem="o0h-Ve-Z2S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="KLZ-iO-wB7"/>
+                            <constraint firstItem="GKu-bq-qhj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mz9-j5-qJ6"/>
                             <constraint firstItem="o0h-Ve-Z2S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="aFn-2b-rsd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GIf-3z-oEl" secondAttribute="trailing" constant="24" id="aKe-Dv-Mng"/>
+                            <constraint firstItem="GKu-bq-qhj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dju-cP-0Od"/>
                             <constraint firstItem="GIf-3z-oEl" firstAttribute="top" secondItem="o0h-Ve-Z2S" secondAttribute="bottom" constant="24" id="lWo-os-lwN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GIf-3z-oEl" secondAttribute="bottom" constant="24" id="xPr-cV-Fgv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I7z-jw-6RS"/>
                     <connections>
-                        <outlet property="newCaseLabel" destination="LEg-wo-9gf" id="JJQ-nZ-JK2"/>
+                        <outlet property="indicatorView" destination="GKu-bq-qhj" id="lhq-Hk-710"/>
+                        <outlet property="labelStackView" destination="o0h-Ve-Z2S" id="CT9-TR-84x"/>
+                        <outlet property="newCaseLabel" destination="vPQ-sZ-ZlA" id="r8Q-51-BYn"/>
                         <outlet property="pieChartView" destination="GIf-3z-oEl" id="SSp-4f-aTb"/>
-                        <outlet property="totalCaseLabel" destination="ncP-2k-Qir" id="0b6-14-nS0"/>
+                        <outlet property="totalCaseLabel" destination="ZZM-YD-43U" id="YPM-MZ-Ohc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,7 +94,7 @@
         <!--Covid Detail View Controller-->
         <scene sceneID="Ubw-K3-8Ym">
             <objects>
-                <tableViewController id="BwF-Kx-K7e" customClass="CovidDetailViewController" customModule="COVID19" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CovidDetailViewController" id="BwF-Kx-K7e" customClass="CovidDetailViewController" customModule="COVID19" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="e3k-O4-0N2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,13 +279,13 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="deathCell" destination="qvJ-lb-uBQ" id="IG2-Jt-113"/>
-                        <outlet property="newCaseCell" destination="IG8-5M-ZZz" id="c5t-LJ-hkg"/>
-                        <outlet property="overseasInflowCell" destination="sKI-hb-Dmt" id="iFG-VU-zyr"/>
-                        <outlet property="percentageCell" destination="ccW-L7-WWG" id="qBh-bL-6dg"/>
-                        <outlet property="recoveredCell" destination="3YM-pF-4ZR" id="4l8-NH-c8A"/>
-                        <outlet property="regionalOunbreakCell" destination="bsR-av-ats" id="oAk-HD-KHI"/>
-                        <outlet property="totalCaseCell" destination="nDI-Db-Vot" id="IJF-ce-dWZ"/>
+                        <outlet property="deathCell" destination="2n7-O7-fff" id="OaM-3y-YiD"/>
+                        <outlet property="newCaseCell" destination="2SI-kG-XLb" id="pyD-tC-rhO"/>
+                        <outlet property="overseasInflowCell" destination="mt8-yt-yLP" id="WNH-XG-0t4"/>
+                        <outlet property="percentageCell" destination="QII-5A-N1c" id="d98-Fb-thj"/>
+                        <outlet property="recoveredCell" destination="OEF-qw-TXT" id="KCO-9e-A3L"/>
+                        <outlet property="regionalOutbreakCell" destination="Eky-LW-YgP" id="WLd-JT-Ngl"/>
+                        <outlet property="totalCaseCell" destination="gvg-ra-bTx" id="idj-rH-akw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ham-ml-IxW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

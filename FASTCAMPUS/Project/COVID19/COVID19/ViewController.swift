@@ -10,26 +10,97 @@ import UIKit
 import Alamofire
 import Charts
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var totalCaseLabel: UILabel!
     @IBOutlet weak var newCaseLabel: UILabel!
     @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var labelStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.indicatorView.startAnimating()
         self.fetchCovidOverview(completionHandler: {
             [weak self] result in // 순환 참조 방지, 전달인자로 result
             guard let self = self else { return } // 일시적으로 strong ref가 되게
+            self.indicatorView.stopAnimating()
+            self.indicatorView.isHidden = true
+            self.labelStackView.isHidden = false
+            self.pieChartView.isHidden = false
             switch result {
             case let .success(result):
-                debugPrint("success \(result)")
+                self.configureStackView(koreaCovidOverview: result.korea)
+                
+                let covidOverviewList = self.makeCovidOverviewList(cityCovideOverview: result)
+                self.configureChartView(covidOverviewList: covidOverviewList)
                 
             case let .failure(error):
                 debugPrint("error \(error)")
             }
         }) // 함수 실행 -> 함수는 요청 O 응답 O completionHandler는 (.success(result))를 전달함
         // -> 함수가.success(result)을 전달받으면 case 문에 의해 debugPrint("success \(result)")를 출력
+    }
+    
+    func makeCovidOverviewList(cityCovideOverview: CityCovideOverview) -> [CovidOverview] {
+        return [
+            cityCovideOverview.seoul,
+            cityCovideOverview.busan,
+            cityCovideOverview.daegu,
+            cityCovideOverview.incheon,
+            cityCovideOverview.gwangju,
+            cityCovideOverview.gangwon,
+            cityCovideOverview.daejeon,
+            cityCovideOverview.ulsan,
+            cityCovideOverview.sejong,
+            cityCovideOverview.gyeonggi,
+            cityCovideOverview.chungbuk,
+            cityCovideOverview.chungnam,
+            cityCovideOverview.jeonbuk,
+            cityCovideOverview.jeonnam,
+            cityCovideOverview.gyeongnam,
+            cityCovideOverview.jeju
+        ]
+    }// CityCovideOverview 객체를 입력받아, [CovidOverview]에 할당해줄 것이다
+    func configureChartView(covidOverviewList: [CovidOverview]){
+        self.pieChartView.delegate = self
+        
+        let entries = covidOverviewList.compactMap {[weak self] overview -> PieChartDataEntry? in
+            guard let self = self else { return nil }
+            return PieChartDataEntry(
+                value: removeFormatString(string: overview.newCase),
+                label: overview.countryName,
+                data: overview)
+    }// CovidOverview 객체를 PieChartDataEntry 객체로 매핑시키는 함수
+    // 각 객체는 overview라는 명찰을 한채 전달 될 것이다.
+        let dataSet = PieChartDataSet(entries: entries, label: "코로나 발생 현황")
+        dataSet.entryLabelColor = .black
+        dataSet.valueTextColor = .black
+        dataSet.sliceSpace = 1 // 엔트리 화 된 여러 데이터들의 묶음(세트) 그에대한 설정을 나타낼 것이다.
+        dataSet.xValuePosition = .outsideSlice // 항목이 차트 바깥에 나오게
+        dataSet.valueLinePart1OffsetPercentage = 0.8
+        dataSet.valueLinePart1Length = 0.2
+        dataSet.valueLinePart2Length = 0.3
+        dataSet.colors =
+        ChartColorTemplates.vordiplom() +
+        ChartColorTemplates.joyful() +
+        ChartColorTemplates.liberty() +
+        ChartColorTemplates.pastel() +
+        ChartColorTemplates.material() // 차트를 다양한 색상으로 표현가능
+        self.pieChartView.data = PieChartData(dataSet: dataSet)
+        self.pieChartView.spin(duration: 0.3, fromAngle: self.pieChartView.rotationAngle, toAngle: self.pieChartView.rotationAngle + 80)
+        // 차트를 회전 시키는 메소드
+    }
+        
+    func removeFormatString(string: String)->Double {
+        let formmatter = NumberFormatter()
+        formmatter.numberStyle = .decimal
+        return formmatter.number(from: string)?.doubleValue ?? 0
+    } // String을 Double로 바꿔주는 함수
+        
+    func configureStackView(koreaCovidOverview: CovidOverview) {
+        self.totalCaseLabel.text = "\(koreaCovidOverview.totalCase)명"
+        self.newCaseLabel.text = "\(koreaCovidOverview.newCase)명"
     }
     
     func fetchCovidOverview ( // completionHandler 클로저를 매개변수로 전달받게 !
@@ -73,3 +144,14 @@ class ViewController: UIViewController {
 
     }
 }
+
+
+extension ViewController: ChartViewDelegate {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        guard let covidDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "CovidDetailViewController") as? CovidDetailViewController else { return } // storyboard의 VC를 인스턴스화 !
+        guard let covidOverview = entry.data as? CovidOverview else { return } 
+        // entry.data를 CovidOverview으로 다운 캐스팅하여 전달할 것임
+        covidDetailViewController.covidOverview = covidOverview
+        self.navigationController?.pushViewController(covidDetailViewController, animated: true)
+    } // 차트가 Seleted 됐을때 호출되는 메소드 엔트리 메소드 pra를 통해 가져올 수 있음
+} 
