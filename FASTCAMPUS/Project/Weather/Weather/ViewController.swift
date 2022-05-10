@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         self.tempLabel.text = "\(Int(weatherInformation.temp.temp - 273.15))°C"
         self.minTempLabel.text = "\(Int(weatherInformation.temp.minTemp - 273.15))°C"
         self.maxTempLabel.text = "\(Int(weatherInformation.temp.maxTemp - 273.15))°C"
-    } // 함수안에서 쓰일 parameter weatherInformation는 앞에서 정의한 WeatherInformation 배열에 저장된 값들이다!
+    } // 함수안에서 쓰일 parameter weatherInforma tion는 앞에서 정의한 WeatherInformation 배열에 저장된 값들이다!
     
     func getCurrentWeather(cityName: String) {
     guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=5448715390df41aed509eef3faa3053b") else { return }
