@@ -9,7 +9,6 @@ import UIKit
 
 class CovidDetailViewController: UITableViewController {
 
-
     @IBOutlet weak var newCaseCell: UILabel!
     @IBOutlet weak var totalCaseCell: UILabel!
     @IBOutlet weak var recoveredCell: UILabel!
@@ -20,6 +19,8 @@ class CovidDetailViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+
+    
+    
 }
