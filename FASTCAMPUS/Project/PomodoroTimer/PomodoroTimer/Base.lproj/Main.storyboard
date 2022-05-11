@@ -42,11 +42,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="143" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                        <connections>
+                                            <action selector="cancleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9t0-f4-cbk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-SL-zIr">
                                         <rect key="frame" x="223" y="0.0" width="143" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="시작"/>
+                                        <connections>
+                                            <action selector="toggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zez-ll-EAQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -70,10 +76,17 @@
                             <constraint firstItem="66x-0l-5fT" firstAttribute="top" secondItem="DgD-2D-7zo" secondAttribute="bottom" constant="24" id="yXZ-bc-rib"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancleButton" destination="BA7-h7-o22" id="qkn-cx-vz5"/>
+                        <outlet property="dataPicker" destination="DgD-2D-7zo" id="qeT-5i-7Tj"/>
+                        <outlet property="prograssView" destination="2Gn-01-AIU" id="Jgs-WB-4ts"/>
+                        <outlet property="timerLabel" destination="LdZ-VS-hqe" id="UMD-1m-cI5"/>
+                        <outlet property="toggleButton" destination="eFP-SL-zIr" id="JBg-FI-zTv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="94"/>
+            <point key="canvasLocation" x="-280" y="95"/>
         </scene>
     </scenes>
     <resources>
