@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 enum TimerStatus {
     case start
@@ -41,11 +42,16 @@ class ViewController: UIViewController {
             self.timer = DispatchSource.makeTimerSource(flags: [], queue: .main) // [GCB] UI관련작업은 main Thread에서 !
             self.timer?.schedule(deadline: .now(), repeating: 1) // 타이머의 주기 설정 메소드
             self.timer?.setEventHandler(handler: { [weak self] in
-                self?.currentSeconds -= 1
-                debugPrint(self?.currentSeconds)
-
-                if self?.currentSeconds ?? 0 <= 0 { // [조건문] self?.currentSeconds가 0보다 작거나 같다면 !
-                    self?.stopTimer()
+                guard let self = self else {return}
+                self.currentSeconds -= 1
+                let hour = self.currentSeconds / 3600
+                let minutes = (self.currentSeconds % 3600) / 60
+                let seconds = (self.currentSeconds % 3600) % 60
+                self.timerLabel.text = String(format: "%02d:%02d:%02d", hour,minutes,seconds)
+                self.prograssView.progress = Float(self.currentSeconds) / Float(self.duration)
+                if self.currentSeconds ?? 0 <= 0 { // [조건문] self?.currentSeconds가 0보다 작거나 같다면 !
+                    self.stopTimer()
+                    AudioServicesPlaySystemSound(1005) // 완료 시 아이폰 기본 알람
                 }
             })// 1초(repeating)에 한번씩 무슨일이 일어나게 할지를 핸들러 클로즈에 설정하기
             self.timer?.resume()
