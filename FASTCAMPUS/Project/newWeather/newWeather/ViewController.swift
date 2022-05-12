@@ -10,6 +10,12 @@ import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    @IBOutlet weak var metaLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchWeatherOverview(completionHandler: {
@@ -17,11 +23,17 @@ class ViewController: UIViewController {
             guard let self = self else { return } // 일시적으로 strong ref가 되게
             switch result {
             case let .success(result):
-                debugPrint(result)
+                self.configureStackView(movieOverview: result)
             case let .failure(error):
                 debugPrint("error \(error)")
             }
         })
+    }
+    
+    func configureStackView(movieOverview: weatherOverview) {
+        self.statusLabel.text = "\(movieOverview.status)"
+        self.messageLabel.text = "\(movieOverview.status_message)"
+        self.metaLabel.text = "\(movieOverview.meta.execution_time)"
     }
 
     func fetchWeatherOverview ( // completionHandler 클로저를 매개변수로 전달받게 !
