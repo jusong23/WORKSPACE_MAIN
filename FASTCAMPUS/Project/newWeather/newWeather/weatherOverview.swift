@@ -11,6 +11,7 @@ struct weatherOverview: Codable {
     let status: String
     let status_message: String
     let meta: meta
+    
     enum CodingKeys: String, CodingKey {
         case status
         case status_message
