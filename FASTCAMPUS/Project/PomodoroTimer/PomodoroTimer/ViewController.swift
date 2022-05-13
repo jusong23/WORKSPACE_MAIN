@@ -100,8 +100,8 @@ class ViewController: UIViewController {
     }
     
     func configureToggleButton() {
-        self.toggleButton.setTitle("시작", for: .normal)
-        self.toggleButton.setTitle("일시정지", for: .selected)
+        self.toggleButton.setTitle("Start", for: .normal)
+        self.toggleButton.setTitle("Pause", for: .selected)
     } // 버튼이 눌렸을때 버튼 설정이 바뀌게(viewDidLoad안에 작성)
     
 //    func setTimerInfoViewVisble(isHidden: Bool) {

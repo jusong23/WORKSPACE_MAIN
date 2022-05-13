@@ -41,7 +41,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-h7-o22">
                                         <rect key="frame" x="0.0" y="0.0" width="143" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                         <connections>
                                             <action selector="tapCancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WBK-tq-Dq8"/>
                                         </connections>
@@ -49,7 +49,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-SL-zIr">
                                         <rect key="frame" x="223" y="0.0" width="143" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="시작"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start"/>
                                         <connections>
                                             <action selector="tapToggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GPU-uu-soy"/>
                                         </connections>
