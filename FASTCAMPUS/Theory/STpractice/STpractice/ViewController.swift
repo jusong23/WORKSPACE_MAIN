@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBAction func tapPushButton(_ sender: Any) {
         guard let codePushViewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePushViewController") as? CodePushViewController else { return }
         self.navigationController?.pushViewController(codePushViewController, animated: true)
+        codePushViewController.delegate = self
         codePushViewController.valueInPushController = self.textField.text
     }
     
@@ -37,9 +38,15 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: sendDataDelegate {
-    func sendData(goToVC: String) {
+extension ViewController: sendDataDelegateByPresent {
+    func sendDataByPresent(goToVC: String) {
         self.willBeChangingLabel.text = goToVC
     }
 }
 
+
+extension ViewController: sendDataDelegateByPush {
+    func sendDataByPush(goToVC: String) {
+        self.willBeChangingLabel.text = goToVC
+    }
+}
