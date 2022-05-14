@@ -53,31 +53,31 @@ class ViewController: UIViewController {
                 self.prograssView.progress = Float(self.currentSeconds) / Float(self.duration)
                 
                 
-//                UIView.animate(withDuration: 0.25, delay: 0, animations: {
-//                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi)
-//                })
-//                UIView.animate(withDuration: 0.25, delay: 0.25, animations: {
-//                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi * 2)
-//                })
-//                UIView.animate(withDuration: 0.25, delay: 0.5, animations: {
-//                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi)
-//                })
-//                UIView.animate(withDuration: 0.25, delay: 0.75, animations: {
-//                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi * 2)
-//                })
-                
                 UIView.animate(withDuration: 0.25, delay: 0, animations: {
-                    self.imageView.transform = CGAffineTransform(scaleX: 30, y: 30)
+                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi)
                 })
                 UIView.animate(withDuration: 0.25, delay: 0.25, animations: {
-                    self.imageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi * 2)
                 })
                 UIView.animate(withDuration: 0.25, delay: 0.5, animations: {
-                    self.imageView.transform = CGAffineTransform(scaleX: 30, y: 30)
+                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi)
                 })
                 UIView.animate(withDuration: 0.25, delay: 0.75, animations: {
-                    self.imageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                    self.imageView.transform = CGAffineTransform(rotationAngle: .pi * 2)
                 })
+                
+//                UIView.animate(withDuration: 0.25, delay: 0, animations: {
+//                    self.imageView.transform = CGAffineTransform(scaleX: 30, y: 30)
+//                })
+//                UIView.animate(withDuration: 0.25, delay: 0.25, animations: {
+//                    self.imageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+//                })
+//                UIView.animate(withDuration: 0.25, delay: 0.5, animations: {
+//                    self.imageView.transform = CGAffineTransform(scaleX: 30, y: 30)
+//                })
+//                UIView.animate(withDuration: 0.25, delay: 0.75, animations: {
+//                    self.imageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+//                })
             
                 if self.currentSeconds ?? 0 <= 0 { // [조건문] self?.currentSeconds가 0보다 작거나 같다면 !
                     AudioServicesPlaySystemSound(1005) // 완료 시 아이폰 기본 알람
