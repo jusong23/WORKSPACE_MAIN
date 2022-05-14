@@ -8,10 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var ExampleText: String?
+    
+   
     
     @IBOutlet weak var textField: UITextField!
+    
     @IBOutlet weak var willBeChangingLabel: UILabel!
     
     @IBAction func tapPushButton(_ sender: Any) {
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         guard let codePresentViewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePresentViewController") as? CodePresentViewController else { return }
         codePresentViewController.modalPresentationStyle = .fullScreen
         codePresentViewController.valueInPresentController = self.textField.text
+        codePresentViewController.delegate = self
         self.present(codePresentViewController, animated: true)
     }
     
@@ -33,5 +35,11 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: sendDataDelegate {
+    func sendData(goToVC: String) {
+        self.willBeChangingLabel.text = goToVC
+    }
 }
 
