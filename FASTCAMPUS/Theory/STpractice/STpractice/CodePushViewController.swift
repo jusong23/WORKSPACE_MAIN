@@ -9,7 +9,7 @@ import UIKit
 
 class CodePushViewController: UIViewController {
 
-    var pushed: String?
+    var valueInPushController: String?
     
     @IBOutlet weak var pushedLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
@@ -19,7 +19,7 @@ class CodePushViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let codePushed = pushed {
+        if let codePushed = valueInPushController {
             self.pushedLabel.text = codePushed
         }
     }

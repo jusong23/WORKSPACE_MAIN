@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBAction func tapPushButton(_ sender: Any) {
         guard let codePushViewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePushViewController") as? CodePushViewController else { return }
         self.navigationController?.pushViewController(codePushViewController, animated: true)
-        codePushViewController.pushed = self.textField.text 
+        codePushViewController.valueInPushController = self.textField.text
     }
     
     @IBAction func tapPresentButton(_ sender: Any) {
