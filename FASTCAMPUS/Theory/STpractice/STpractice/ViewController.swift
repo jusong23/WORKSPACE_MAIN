@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBAction func tapPresentButton(_ sender: Any) {
         guard let codePresentViewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePresentViewController") as? CodePresentViewController else { return }
         codePresentViewController.modalPresentationStyle = .fullScreen
+        codePresentViewController.valueInPresentController = self.textField.text
         self.present(codePresentViewController, animated: true)
     }
     
