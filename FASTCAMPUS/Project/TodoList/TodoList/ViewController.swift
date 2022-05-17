@@ -80,7 +80,7 @@ class ViewController: UIViewController {
     }
     
     func loadTasks() {
-        let userDefaluts = UserDefaults.standard
+        ㄹlet userDefaluts = UserDefaults.standard
         guard let data = userDefaluts.object(forKey: "tasks") as? [[String: Any]] else {return}
         self.tasks = data.compactMap({
             guard let title = $0["title"] as? String else { return nil }
